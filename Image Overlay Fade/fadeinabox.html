@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+    .container1 {
+      position: relative;
+      width: 50%;
+    }
+    
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #59afcc;
+    }
+    
+    .container1:hover .overlay {
+      opacity: 1;
+    }
+    
+    .text1 {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+
+<h2>Opacity with Box</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container">
+  <img src="images/paris-mormon-temple2-e1449027634924.jpg" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">paris-mormon-temple</div>
+  </div>
+</div>
+  
+<h2>Fade in Overlay</h2>
+<p>Hover over the image to see the effect.</p>
+
+<div class="container1">
+  <img src="images/Oakland Temple - exterior - 11 x 17.webp" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text1">Oakland Temple - exterior</div>
+  </div>
+</div>
+</body>
+</html>
